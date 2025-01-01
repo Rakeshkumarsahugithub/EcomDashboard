@@ -1,0 +1,123 @@
+/* ThemeMode.css
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.theme-mode {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.theme-toggle-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #0056b3;
+} */
+/* ThemeMode.css */
+
+/* Body Theme Styles */
+
+
+
+/* ThemeMode.css */
+
+/* Body Theme Styles */
+body.light {
+    background: #fafafc;
+    color: #333;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+body.dark {
+    background: #181a1b;
+    color: #eaeaea;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Theme Toggle Container */
+.theme-mode {
+    position: fixed;
+    top: 13px;
+    right: 5px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+/* Slider Toggle Container */
+.theme-toggle {
+    margin-top: 7px;
+    width: 65px;
+    height: 29px;
+    background: linear-gradient(90deg, #faf8f8 0%, #474343 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+body.dark .theme-toggle {
+    background: linear-gradient(90deg, #333 0%, #555 100%);
+}
+
+/* Slider Handle */
+.theme-toggle-handle {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+body.dark .theme-toggle-handle {
+    background: #f0f0f0;
+}
+
+/* Position of the Handle */
+.theme-toggle.light .theme-toggle-handle {
+    transform: translate(5px, -50%);
+}
+
+.theme-toggle.dark .theme-toggle-handle {
+    transform: translate(35px, -50%);
+}
+
+/* Icons Inside the Slider */
+.theme-toggle-icon {
+    font-size: 12px;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+body.dark .theme-toggle-icon {
+    color: #ccc;
+}
+
+
+

@@ -1,0 +1,94 @@
+/* src/Home.css */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.home-container {
+    text-align: center;
+    background: linear-gradient(135deg, #f6d365, #fda085); /* Gradient background */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home-header {
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-header h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+}
+
+.home-header p {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-top: 10px;
+}
+
+.home-features {
+    padding: 50px 20px;
+}
+
+.home-features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    text-align: center;
+}
+
+.feature-card h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+.home-footer {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+

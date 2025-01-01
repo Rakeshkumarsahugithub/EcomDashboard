@@ -1,0 +1,238 @@
+.navul {
+  position: relative;
+  top: 0;
+  background-color: rgb(138, 198, 235);
+  padding: 20px;
+  margin: 0;
+  width: 100%;
+
+}
+
+.navul li {
+  display: inline;
+  padding: 15px;
+}
+
+.navul li a {
+  margin-right: 150px;
+  color: rgb(118, 16, 16);
+  font-size: larger;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.right{
+  text-align: right;
+} 
+li{
+  color: #ebdede;
+}
+
+.footer {
+  position: fixed;         
+  bottom: 0;              
+  left: 0;                 
+  width: 100%;             
+  text-align: center;      
+  background-color: rgb(138, 198, 235);
+  padding: 10px 0;
+  color: #333;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+  z-index: 10;            
+}
+
+.regi{
+padding: 90px;
+margin-left: 100px;
+
+  
+}
+#sign{
+  cursor: pointer;
+}
+#sign:hover{
+  background-color: azure;
+}
+.inputBox{
+  
+  margin-left: 76px;
+  margin-top: 20px;
+  width: 400px;
+  border: 1px solid black;
+}
+.inputBox2{
+  
+  margin-left: 76px;
+  margin-top: 20px;
+  width: 400px;
+  border: 1px solid black;
+}
+.inputBox3{
+  
+  margin-left: 50px;
+  margin-top: 20px;
+  width: 400px;
+  border: 1px solid black;
+}
+.inputBox4{
+  
+  margin-left: 30px;
+  margin-top: 20px;
+  width: 400px;
+  border: 1px solid black;
+}
+#sign{
+  padding: 5px;
+  width: 500px;
+  margin-left: 11%;
+
+}
+
+.inputBx{
+  padding: 7px;
+  display: block;
+  border: 1px solid rgb(212, 125, 43);
+  width: 400px;
+  margin: 20px;
+}
+.prdbtn{
+  margin: 20px;
+  width: 400px;
+  padding: 10px;
+  background-color: darkgoldenrod;
+  border: solid 1px;
+  cursor: pointer;
+}
+.addproduct{
+margin-left: 30%;
+}
+#popup{
+display: block;
+margin-top: -20px;
+margin-left: 20px;
+color: red;
+}
+
+.productli {
+  color:black;
+  text-align: center;
+  margin-top:50px ;
+ 
+}
+.productli li {
+  color:rgb(0, 0, 0);
+  text-align: center;
+  display:inline-flex;
+  width: 150px;
+  border: 1px solid rgb(0, 170, 255);
+  padding: 10px;
+ 
+}
+.productli li button {
+   padding: 0;
+   
+      font-size: 10px;
+      background-color: rgb(158, 212, 189);
+      color: rgb(249, 24, 58);
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 800;
+      border: 1px solid rgb(16, 116, 166);
+      
+     
+}
+
+
+.productli li button a  {
+color: rgb(35, 72, 6); 
+  text-decoration: none;
+  border-radius: 5px;
+
+ 
+}
+
+.productli ul{
+  margin: 0;
+  
+}
+.searchh{
+  padding: 5px;
+  font-size: large;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 400px;
+  border: 2px solid rgb(56, 174, 221);
+  color: rgb(8, 21, 139);
+  
+}
+#serbtn{
+  
+  padding: 9px;
+  font-size: 15px;
+  background-color: skyblue;
+  color: rgb(23, 6, 179);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  border: 1.5px solid rgb(195, 247, 121);
+    
+}
+.Logbtn {
+  background-color: red;
+  color: white;
+  margin-left: 300px;
+ 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 15px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.Logbtn:hover {
+  background-color: darkred; 
+}
+
+.Logbtn:focus {
+  outline: none; 
+}
+
+.Logbtn:active {
+  background-color: crimson; 
+}
+
+
+
+.navul li a {
+  margin-right: 150px;
+  color: rgb(118, 16, 16);
+  font-size: larger;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.navul li a.home-link {
+  color: darkgreen;
+  font-size: larger; 
+  font-weight: bold; 
+  background-color: lightyellow; 
+  padding: 8px 12px; 
+  border-radius: 10px; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
+}
+
+.navul li a.home-link:hover {
+  background-color: goldenrod; 
+  color: white; 
+}
+
+
+
+
+
+
