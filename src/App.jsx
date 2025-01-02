@@ -11,7 +11,7 @@
             import SignUp from "./SignUP";
             import Login from "./Login";
             import AddProduct from "./AddProduct";
-            import ProductList from "./ProductList";
+            import ProductList from "./Productlist";
             import UpdateProduct from "./UpdateProduct";
             import Nav from "./Nav";
             import Home from "./Home";
