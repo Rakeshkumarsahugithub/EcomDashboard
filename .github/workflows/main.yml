@@ -24,7 +24,5 @@ jobs:
     steps:
       - name: Pull image from Docker Hub
         run: docker pull rakesh127/my-react-app:latest
-        - NAME: Delete old container
-        run: docker rm -f my-react-app-container
       - name: Run Docker Container
         run: docker run -d -p 5000:5000 my-react-app-container -e MONGO_PASSWORD="${{ secrets.DOCKER_PASSWORD }}" rakesh127/my-react-app:latest
