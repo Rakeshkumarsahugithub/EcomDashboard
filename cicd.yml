@@ -25,8 +25,7 @@ jobs:
       - name: Pull image from Docker Hub
         run: docker pull rakesh127/my-react-app:latest
 
-      - name: Delete old container (if exists)
-        run: docker rm -f my-react-app-container || true  # Ensures no error if container doesn't exist
+ # Ensures no error if container doesn't exist
 
       - name: Run Docker Container
         run: docker run -d -p 5000:5000 --name my-react-app-container -e MONGO_PASSWORD="${{ secrets.DOCKER_PASSWORD }}" rakesh127/my-react-app:latest
