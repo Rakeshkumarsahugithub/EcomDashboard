@@ -1,3 +1,44 @@
+# name: Deploy Node.js Application
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Source
+#         uses: actions/checkout@v4
+
+#       - name: Login to DockerHub  
+#         run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+
+#       - name: Build Docker Image
+#         run: docker build -t rakesh127/my-react-app:latest . --build-arg REACT_APP_NODE_ENV="production" --build-arg REACT_APP_SERVER_BASE_URL=${{ secrets.REACT_APP_SERVER_BASE_URL }}
+
+#       - name: Publish Image to Docker Hub
+#         run: docker push rakesh127/my-react-app:latest
+
+#   deploy:
+#     needs: build
+#     runs-on: self-hosted
+#     steps:
+#       - name: Pull Image from Docker Hub
+#         run: docker pull rakesh127/my-react-app:latest
+
+#       # Remove existing container if it exists
+#       - name: Stop and Remove Existing Container
+#         run: |
+#           docker rm -f my-react-app-container || echo "No existing container to remove"
+
+#       # Run new container
+#       - name: Run Docker Container
+#         run: |
+#           docker run -d -p 5000:5000 --name my-react-app-container -e MONGO_PASSWORD="${{ secrets.DOCKER_PASSWORD }}" rakesh127/my-react-app:latest
+
+
 name: Deploy Node.js Application
 
 on:
@@ -16,7 +57,10 @@ jobs:
         run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
 
       - name: Build Docker Image
-        run: docker build -t rakesh127/my-react-app:latest . --build-arg REACT_APP_NODE_ENV="production" --build-arg REACT_APP_SERVER_BASE_URL=${{ secrets.REACT_APP_SERVER_BASE_URL }}
+        run: |
+          docker build -t rakesh127/my-react-app:latest . \
+          --build-arg REACT_APP_NODE_ENV="production" \
+          --build-arg REACT_APP_SERVER_BASE_URL="${{ secrets.REACT_APP_SERVER_BASE_URL }}"
 
       - name: Publish Image to Docker Hub
         run: docker push rakesh127/my-react-app:latest
@@ -28,12 +72,13 @@ jobs:
       - name: Pull Image from Docker Hub
         run: docker pull rakesh127/my-react-app:latest
 
-      # Remove existing container if it exists
       - name: Stop and Remove Existing Container
         run: |
-          docker rm -f my-react-app-container || echo "No existing container to remove"
+          docker stop my-react-app-container || true
+          docker rm my-react-app-container || true
 
-      # Run new container
       - name: Run Docker Container
         run: |
-          docker run -d -p 5000:5000 --name my-react-app-container -e MONGO_PASSWORD="${{ secrets.DOCKER_PASSWORD }}" rakesh127/my-react-app:latest
+          docker run -d -p 5000:5000 --name my-react-app-container \
+          -e REACT_APP_SERVER_BASE_URL="${{ secrets.REACT_APP_SERVER_BASE_URL }}" \
+          rakesh127/my-react-app:latest
